@@ -1,6 +1,6 @@
 {
-	"name": "theme-km",
-	"displayName": "theme-km",
+	"name": "km-extension",
+	"displayName": "km-extension",
 	"icon": "images/red-database-128.png",
 
 	"description": "",
@@ -34,7 +34,7 @@
 			}
 		],
 		"languages": [{
-			"id": "sql",
+			"id": "sql-km",
 			"aliases": [
 				"SQL-KM",
 				"sql5"
@@ -45,7 +45,7 @@
 			"configuration": "./language-configuration.json"
 		}],
 		"grammars": [{
-			"language": "sql",
+			"language": "sql-km",
 			"scopeName": "source.sql",
 			"path": "./syntaxes/sql-km.tmLanguage.json"
 		}]
