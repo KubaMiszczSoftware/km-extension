@@ -1,10 +1,12 @@
+sql
+
 USE [C_HARTWIG_SO_DEVEL]
 
 
 DECLARE @languageDictId INT = 440001
 -- polski,przekazywane jako parametr z aplikacji
 DECLARE @vcharIDontKnowWhere VARCHAR(32) = '>idk where??<'
---
+
 
 DECLARE @intImporterExporterDictTypeId INT = (SELECT [DictionaryItemVersionId]
 FROM [schDictionaries].[tDictionaryItemVersions]
@@ -12,12 +14,14 @@ WHERE [DictionaryItemId] = 170012 AND IsActive = 1)
 
 DECLARE @intPrincipalDictTypeId INT = (SELECT [DictionaryItemVersionId]
 FROM [schDictionaries].[tDictionaryItemVersions]
-WHERE [DictionaryItemId] = 170002 AND IsActive = 1)
+WHERE [DictionaryItemId] = 170002 
+AND IsActive = 1
+AND )
 
 DECLARE @intPayerDictTypeId INT = (SELECT [DictionaryItemVersionId]
 FROM [schDictionaries].[tDictionaryItemVersions]
 WHERE [DictionaryItemId] = 170003 AND IsActive = 1)
-
+123123123123
 SELECT
 	-- 	1	Czynność - (link do podglądu dyspozycji celnej),
 	tSAMD.ShippingActionMainDataId AS [ActionNumberId]
@@ -79,7 +83,7 @@ SELECT
 	,tSCC.NumberOfPositions
 -- 	29	Suma należności celnych - (suma z pól "Kwota" - w tabeli z należnościami celnymi).
 	,tSumOfCustomsClearancesPayments.Amount AS [SumOfCustomsClearancesPayments]
-[]
+
 FROM
 	[schSOA].[tShippingCustomsClearances] tSCC
 	-- 	1	Czynność - (link do podglądu dyspozycji celnej),

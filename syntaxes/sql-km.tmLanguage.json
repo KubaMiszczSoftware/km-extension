@@ -2,7 +2,7 @@
 	"information_for_contributors": [
 		"This file has been converted from https://github.com/Microsoft/vscode-mssql/blob/master/syntaxes/SQL.plist",
 		"If you want to provide a fix or improvement, please create a pull request against the original repository.",
-		"Once accepted there, we are happy to receive an update request."
+		"Once accepted there, we are happy to receive an update request.kuba"
 	],
 	"version": "https://github.com/Microsoft/vscode-mssql/commit/c8effddd6a9df117f3ed45b60b487163950a7ea5",
 	"name": "SQL-KM",
@@ -162,27 +162,7 @@
 			"name": "keyword.other.object-comments.sql"
 		},
 		{
-			"match": "(?i)(\\[?\\w+\\]?)(\\.)(\\[?\\w+\\]?)\\s+(\\bAS\\b)*\\s*(\\[?[\\w\\s]+\\]?)",
-			"captures": {
-				"1": {
-					"name": "constant.other.database-name.sql"
-				},
-				"2": {
-					"name": "keyword.sql"
-				},
-				"3": {
-					"name": "constant.other.table-name.sql"
-				},
-				"4": {
-					"name": "keyword.sql"
-				},
-				"5": {
-					"name": "keyword.other.tablealias.sql"
-				}
-			}
-		},
-		{
-			"match": "(?i)[\\]\\)]+\\W+(\\bAS\\b)*\\W*(.*)",
+			"match": "(?i)[\\]\\)]?\\W+(\\bAS\\b)*\\W*(\\w*)",
 			"captures": {
 				"1": {
 					"name": "keyword.sql"
@@ -203,6 +183,10 @@
 		{
 			"match": "[!<>]?=|<>|<|>",
 			"name": "keyword.operator.comparison.sql"
+		},
+		{
+			"match": "\\s*=\\s*",
+			"name": "keyword.sql"
 		},
 		{
 			"match": "-|\\+|/",
