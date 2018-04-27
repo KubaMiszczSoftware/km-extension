@@ -1,0 +1,95 @@
+
+		{
+			"match": "(\[?\w+\]?)(\.)+(\[?\w+\]?)\s+(\b(AS|as)\b)?\s*(\[?[\w.]*\]?)",
+			"captures": {
+				"1": {
+					"name": "constant.other.database-name.sql"
+				},
+				"2": {
+					"name": "keyword.sql"
+				},
+				"3": {
+					"name": "constant.other.table-name.sql"
+				},
+				"4": {
+					"name": "keyword.sql"
+				},
+				"5": {
+					"name": "keyword.sql"
+				},
+				"6": {
+					"name": "keyword.other.tablealias.sql"
+				}
+			}
+		},
+		\[?\w+\]?\.\[?\w+\]?\s\[?([\w\s]+)\]?\n
+
+(\\[ ? \\w + \\] ? \\.\\[ ? \\w + \\] ? \\s + \\[ ? )([\\w\\ s] + )(\\] ? )
+JOIN\\s*\\[?\\w+\\]?\\.\\[?\\w+\\]?\\s*(\\bAS\\b)*(\\[?[\\w\\s]+\\]?)\\n
+(\\[?[\\w\\s]+\\]?)\\.(\\[?[\\w\\s]+\\]?)\\s+(\\[?[\\w\\s]+\\]?)
+
+
+
+
+
+
+			"match": "(?i)(\\[?\\w+\\]?)(\\.)(\\[?\\w+\\]?)\\s+(\\bAS\\b)*\\s*(\\[?[\\w\\s]+\\]?)",
+
+
+
+
+
+
+
+
+
+
+		{
+			"match": "(?i)([\\]\\)]+)(\\bAS\\b)*\\W+(.*)",
+			"captures": {
+				"1": {
+					"name": "keyword.sql"
+				},
+				"2": {
+					"name": "keyword.sql"
+				},
+				"3": {
+					"name": "keyword.other.tablealias.sql"
+				}
+			}
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LEFT JOIN s1chSO.tShippingOperationMetrics tS1OM
+LEFT JOIN [s2chSO].tShippingOperationMetrics [tS2OM]
+LEFT JOIN [s3chSO].[tShippingOperationMetrics] [tS3 OM]
+ON t4SCC.[PayerTypeId] = tPayerType.[DictionaryItemVersionId]
+LEFT JOIN [schDictionaries].[tDictionaryItemVersions] tExpeditionType
+-- 	1	Czynność - (link do podglądu dyspozycji celnej),
+	tS2AMD.Shippi2ngActionMainDataId AS [xxActionNumberId]
+	LEFT JOIN szzzzzzchUsers.tUsers xxtPrincipalCHG
+	ON tSsa22222ssA.CreatedUsersaasId = txxxPrincipalCHG.UserId
+LEFT JOIN szzzzzzchUsers.tUsers xxtPrincipalCHG
+	ON tSsa22222ssA.CreatedUsersaasId = txxxPrincipalCHG.UserId
+-- 	5	Data przyjęcia do realizacji
+	,tSA.AcceptanceDate AS [xxRealizationAc2c1eptanceDate]
+-- 	6	Data realizacji
+	,tSA.RealizationDate 
+LEFT JOIN [schDictionaries].[tDictionaryItemNames] tIncotermsName
+ON [schDictionaries].[tDictionaryItemNames] tIncotermsName

@@ -1,0 +1,23 @@
+{
+	"routerLink inside tag": {
+		"prefix": "km-ng-routerLink",
+		"body": [
+			"[routerLink]=\"[ '/${1:path}',${2| ,routeParam|}]\""
+		],
+		"description": "routerLink"
+	},
+	"click event": {
+		"prefix": "km-click-event",
+		"body": [
+			"(click)='${1:funtionName}(${2:itemName})'"
+		],
+		"description": "click event"
+	},
+	"handle event in target": {
+		"prefix": "km-handle-event",
+		"body": [
+			"(${1:notify})='on${2:EventName}(\\$$event)'"
+		],
+		"description": "handle event in target"
+	}
+}

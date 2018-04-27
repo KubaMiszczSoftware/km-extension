@@ -1,0 +1,53 @@
+{
+	"name": "theme-km",
+	"displayName": "theme-km",
+	"icon": "images/red-database-128.png",
+
+	"description": "",
+	"version": "0.0.1",
+	"publisher": "KubaMiszcz",
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Themes",
+		"Snippets",
+		"Languages"
+	],
+	"contributes": {
+		"themes": [{
+			"label": "theme km",
+			"uiTheme": "vs",
+			"path": "./themes/km-color-theme.json"
+		}],
+		"snippets": [{
+				"language": "sql",
+				"path": "./snippets/sql.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			}
+		],
+		"languages": [{
+			"id": "sql",
+			"aliases": [
+				"SQL-KM",
+				"sql5"
+			],
+			"extensions": [
+				"sql"
+			],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "sql",
+			"scopeName": "source.sql",
+			"path": "./syntaxes/sql-km.tmLanguage.json"
+		}]
+	}
+}

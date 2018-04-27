@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "sql",
+	"patterns": [{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#aliases"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.sss.sql",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.doubl.sql.eeee",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape.sql",
+				"match": "\\\\."
+			}]
+		},
+		"aliases": {
+			"patterns": [{
+				"match": "\\s*\\b(AS|as)\\b\\s*(\\[*.*\\]*)",
+				"captures": {
+					"1": {
+						"name": "keyword.other.zzaliasssas.sql"
+					},
+					"2": {
+						"name": "keyword.other.zzzaliassstable.sql"
+					}
+				},
+				"name": "keyword.other.zzzzzzaliasaa.sql"
+			}]
+		}
+	},
+	"scopeName": "source.sql"
+}
